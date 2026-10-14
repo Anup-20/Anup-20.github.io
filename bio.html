@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anup Pudasaini — Agriculture Graduate, Researcher & Youth Leader</title>
+  <meta name="description" content="Anup Pudasaini: Agriculture graduate from Tribhuvan University with experience in agricultural research, GIS mapping, and community leadership. Explore his projects and professional journey." />
+  <meta name="keywords" content="Anup Pudasaini, sustainable agriculture, biofertilizers, Nepal agriculture, Tribhuvan University, Lamjung MUN, Agri Mappers, youth leadership, agricultural research, GIS, Environment Based Adaptation" />
+
+  <!-- Fonts — matching Krishi Sarathi brand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ===== Brand Variables — matches index.html ===== */
+    :root {
+      --green-deep:   #1a4d2e;
+      --green-mid:    #2d7a4f;
+      --green-light:  #4caf78;
+      --gold:         #c9933a;
+      --gold-light:   #e8b96a;
+      --cream:        #f7f3ec;
+      --cream-dark:   #ede8df;
+      --earth:        #8b6145;
+      --text-dark:    #1c1c1c;
+      --text-mid:     #4a4a4a;
+      --text-light:   #7a7a7a;
+      --white:        #ffffff;
+      --shadow-soft:  0 4px 24px rgba(26,77,46,0.10);
+      --shadow-card:  0 8px 32px rgba(26,77,46,0.12);
+      --radius:       16px;
+      --radius-sm:    8px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== Utility ===== */
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+    .section { padding: 80px 0; }
+    .section-sm { padding: 56px 0; }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,147,58,0.12);
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--green-deep);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .section-divider {
+      width: 48px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 100px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.28s cubic-bezier(.4,0,.2,1);
+    }
+    .btn-primary {
+      background: var(--green-deep);
+      color: var(--white);
+      box-shadow: 0 4px 18px rgba(26,77,46,0.22);
+    }
+    .btn-primary:hover { background: var(--green-mid); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--green-deep);
+      border: 2px solid var(--green-deep);
+    }
+    .btn-outline:hover { background: var(--green-deep); color: var(--white); transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: var(--white); box-shadow: 0 4px 18px rgba(201,147,58,0.28); }
+    .btn-gold:hover { background: #b57e25; transform: translateY(-2px); }
+
+    /* ===== Scroll Reveal ===== */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-32px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(32px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+    .d4 { transition-delay: 0.42s; }
+    .d5 { transition-delay: 0.54s; }
+
+    /* ===== NAVBAR ===== */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 9999;
+      height: 68px;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(247,243,236,0.94);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 16px rgba(26,77,46,0.08);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+    }
+    .nav-brand-text .brand-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--green-deep);
+      line-height: 1.1;
+    }
+    .nav-brand-text .brand-sub { font-size: 0.68rem; color: var(--text-light); }
+
+    .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      padding: 7px 13px;
+      border-radius: 100px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-links a:hover { background: rgba(26,77,46,0.08); color: var(--green-deep); }
+    .nav-back {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--green-mid);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 100px;
+      border: 1.5px solid var(--green-mid);
+      transition: all 0.2s;
+      margin-left: 6px;
+    }
+    .nav-back:hover { background: var(--green-deep); color: var(--white); border-color: var(--green-deep); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--green-deep); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed; inset: 0;
+      background: var(--cream);
+      z-index: 9998;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--green-deep);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0e3320 0%, #1a4d2e 50%, #1e5c35 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 68px;
+    }
+    .hero-decor-1 {
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,147,58,0.12) 0%, transparent 70%);
+      top: -100px; right: -100px;
+    }
+    .hero-decor-2 {
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(76,175,120,0.1) 0%, transparent 70%);
+      bottom: -60px; left: 5%;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 56px;
+      align-items: center;
+      padding: 80px 0;
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .hero-avatar-wrap { position: relative; }
+    .hero-avatar {
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(201,147,58,0.6);
+      box-shadow: 0 0 0 8px rgba(201,147,58,0.12), 0 20px 48px rgba(0,0,0,0.3);
+      animation: avatarPulse 4s ease-in-out infinite;
+    }
+    .hero-avatar-placeholder {
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4caf78, #1a4d2e);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem;
+      border: 4px solid rgba(201,147,58,0.6);
+      box-shadow: 0 0 0 8px rgba(201,147,58,0.12), 0 20px 48px rgba(0,0,0,0.3);
+    }
+    @keyframes avatarPulse {
+      0%,100% { box-shadow: 0 0 0 8px rgba(201,147,58,0.12), 0 20px 48px rgba(0,0,0,0.3); }
+      50%      { box-shadow: 0 0 0 14px rgba(201,147,58,0.05), 0 20px 48px rgba(0,0,0,0.3); }
+    }
+    .wff-badge {
+      position: absolute;
+      bottom: 4px; right: -10px;
+      background: var(--gold);
+      color: var(--white);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 100px;
+      white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(201,147,58,0.4);
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0;
+      animation: hFade 0.8s 0.2s ease forwards;
+    }
+    .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 2px; background: var(--gold-light); }
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: hFade 0.9s 0.35s ease forwards;
+    }
+    .hero-title-line {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: hFade 0.9s 0.5s ease forwards;
+    }
+    .hero-desc {
+      font-size: 0.97rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.78;
+      max-width: 560px;
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: hFade 0.9s 0.65s ease forwards;
+    }
+    .hero-contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: hFade 0.9s 0.8s ease forwards;
+    }
+    .hero-contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.2s;
+    }
+    .hero-contact-link:hover { color: var(--gold-light); }
+    .hero-contact-link i { font-size: 0.9rem; }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: hFade 0.9s 0.95s ease forwards;
+    }
+    .btn-ghost-white {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(4px);
+    }
+    .btn-ghost-white:hover { background: rgba(255,255,255,0.18); color: var(--white); transform: translateY(-2px); }
+    @keyframes hFade {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Stats strip */
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 44px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      opacity: 0;
+      animation: hFade 0.9s 1.1s ease forwards;
+      flex-wrap: wrap;
+    }
+    .hstat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .hstat-lbl { font-size: 0.72rem; color: rgba(255,255,255,0.5); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.07em; }
+
+    /* ===== SECTION HEADER ===== */
+    .sec-header { margin-bottom: 48px; }
+    .sec-header.centered { text-align: center; }
+    .sec-header.centered .section-divider { margin: 0 auto 20px; }
+
+    /* ===== EXPERIENCE ===== */
+    #experience { background: var(--cream); }
+    .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .exp-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+      border-top: 3px solid var(--green-light);
+      transition: transform 0.28s, box-shadow 0.28s;
+      height: 100%;
+    }
+    .exp-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); }
+    .exp-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+    .exp-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: var(--green-deep);
+      line-height: 1.3;
+    }
+    .exp-date {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--gold);
+      background: rgba(201,147,58,0.1);
+      padding: 3px 10px;
+      border-radius: 100px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .exp-card ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .exp-card li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 0.87rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+    }
+    .exp-card li::before {
+      content: '▸';
+      color: var(--green-light);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    /* WFF card — full width + gold accent */
+    .exp-card.featured { border-top-color: var(--gold); grid-column: 1 / -1; }
+    .exp-card.featured h3 { font-size: 1.15rem; }
+
+    /* ===== EDUCATION & RESEARCH ===== */
+    #research { background: var(--cream-dark); }
+    .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .res-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: var(--shadow-soft);
+    }
+    .res-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--green-deep);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--cream-dark);
+    }
+    .edu-entry { margin-bottom: 24px; }
+    .edu-entry:last-child { margin-bottom: 0; }
+    .edu-degree { font-weight: 600; font-size: 0.95rem; color: var(--text-dark); }
+    .edu-school { font-size: 0.85rem; color: var(--green-mid); margin: 3px 0; }
+    .edu-date { font-size: 0.75rem; color: var(--text-light); }
+    .edu-note { font-size: 0.85rem; color: var(--text-mid); margin-top: 8px; line-height: 1.6; }
+    .grant-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(201,147,58,0.1);
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .rp-item { padding: 18px 0; border-bottom: 1px solid var(--cream-dark); }
+    .rp-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .rp-title { font-weight: 600; font-size: 0.9rem; color: var(--text-dark); margin-bottom: 4px; }
+    .rp-date { font-size: 0.72rem; color: var(--gold); font-weight: 600; margin-bottom: 6px; }
+    .rp-desc { font-size: 0.84rem; color: var(--text-mid); line-height: 1.65; }
+
+    /* ===== PUBLICATIONS ===== */
+    #publications { background: var(--cream); }
+    .pub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+    .pub-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+      border-left: 4px solid var(--gold);
+      transition: transform 0.28s, box-shadow 0.28s;
+    }
+    .pub-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); }
+    .pub-source { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 10px; }
+    .pub-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--green-deep); margin-bottom: 10px; line-height: 1.35; }
+    .pub-desc { font-size: 0.86rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 20px; }
+    .pub-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.84rem; font-weight: 600; color: var(--green-mid); transition: gap 0.2s, color 0.2s; }
+    .pub-link:hover { gap: 10px; color: var(--green-deep); }
+    /* Coming soon card */
+    .pub-card.soon { border-left-color: var(--cream-dark); opacity: 0.6; }
+
+    /* ===== LEADERSHIP ===== */
+    #leadership { background: var(--green-deep); }
+    .lead-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .lead-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: background 0.28s, transform 0.28s;
+    }
+    .lead-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-5px); }
+    .lead-icon {
+      width: 46px; height: 46px;
+      background: rgba(201,147,58,0.2);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+    .lead-date { font-size: 0.72rem; font-weight: 600; color: var(--gold-light); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .lead-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--white); margin-bottom: 10px; line-height: 1.3; }
+    .lead-card p { font-size: 0.84rem; color: rgba(255,255,255,0.58); line-height: 1.7; }
+    .lead-header .section-title { color: var(--white); }
+
+    /* ===== SKILLS ===== */
+    #skills { background: var(--cream-dark); }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .skill-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.28s, box-shadow 0.28s;
+    }
+    .skill-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .skill-icon {
+      width: 46px; height: 46px;
+      background: rgba(26,77,46,0.08);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+    .skill-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--green-deep); margin-bottom: 12px; }
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+    .skill-pill {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--green-mid);
+      background: rgba(45,122,79,0.1);
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+
+    /* ===== GALLERY ===== */
+    #gallery { background: var(--cream); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      aspect-ratio: 1;
+      background: var(--cream-dark);
+    }
+    .gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.07); }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,77,46,0.85) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.35s;
+      display: flex;
+      align-items: flex-end;
+      padding: 14px;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-caption { font-size: 0.75rem; color: var(--white); font-weight: 500; line-height: 1.4; }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 80vh; border-radius: 8px; object-fit: contain; }
+    .lightbox-caption { color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+    .lightbox-close {
+      position: absolute;
+      top: 20px; right: 24px;
+      background: none; border: none;
+      color: var(--white); font-size: 2rem;
+      cursor: pointer; line-height: 1;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .lightbox-close:hover { opacity: 1; }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: var(--white);
+      font-size: 1.5rem;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.2); }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0c1f14;
+      padding: 40px 0;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+    }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .footer-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-social { display: flex; gap: 12px; }
+    .fsoc {
+      width: 34px; height: 34px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .fsoc:hover { background: var(--gold); color: var(--white); transform: translateY(-3px); }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+
+    /* Scroll top */
+    #scrollTop {
+      position: fixed; bottom: 26px; right: 26px;
+      width: 42px; height: 42px;
+      background: var(--green-deep);
+      color: var(--white);
+      border: none; border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(26,77,46,0.3);
+      opacity: 0; transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 8000; font-size: 1rem;
+    }
+    #scrollTop.show { opacity: 1; transform: translateY(0); }
+    #scrollTop:hover { background: var(--green-mid); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 36px; }
+      .hero-avatar-wrap { display: flex; justify-content: center; }
+      .hero-contacts, .hero-actions, .hero-eyebrow { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-desc { margin: 0 auto 28px; }
+      .exp-grid, .research-grid, .lead-grid, .skills-grid { grid-template-columns: 1fr; }
+      .exp-card.featured { grid-column: auto; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 500px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .pub-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <a href="/index.html" class="nav-brand">
+      <img src="logo.jpg" alt="Krishi Sarathi" class="nav-logo" onerror="this.style.display='none'" />
+      <div class="nav-brand-text">
+        <div class="brand-main">Krishi Sarathi</div>
+        <div class="brand-sub">कृषि सारथी</div>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="/index.html" class="nav-back">← Back to Site</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#experience">Experience</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#skills">Skills</a>
+    <a href="#gallery">Gallery</a>
+    <a href="/index.html">← Back to Site</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-decor-1"></div>
+    <div class="hero-decor-2"></div>
+    <div class="hero-inner">
+      <div class="hero-avatar-wrap">
+        <img
+          src="profile.jpg"
+          alt="Anup Pudasaini"
+          class="hero-avatar"
+          onerror="this.outerHTML='<div class=\'hero-avatar-placeholder\'>👨‍🌾</div>'"
+        />
+        <div class="wff-badge">🌍 WFF 2025</div>
+      </div>
+
+      <div>
+        <div class="hero-eyebrow">Agriculture Graduate · Nepal</div>
+        <h1 class="hero-name">Anup Pudasaini</h1>
+        <p class="hero-title-line">Agriculture Content Writer · Researcher · Youth Leader · Tribhuvan University</p>
+        <p class="hero-desc">
+          Motivated and impact-driven agriculture graduate with hands-on experience in agricultural research, GIS mapping, and youth leadership. Bridging research, technology, and community development to create practical solutions for Nepal's agricultural challenges.
+        </p>
+
+        <div class="hero-contacts">
+          <a href="mailto:pudasainianup100@gmail.com" class="hero-contact-link">
+            <i class="fas fa-envelope"></i> pudasainianup100@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/anup-pudasaini-b9a83924b/" target="_blank" rel="noopener" class="hero-contact-link">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://anuppudasaini.com.np" target="_blank" rel="noopener" class="hero-contact-link">
+            <i class="fas fa-globe"></i> anuppudasaini.com.np
+          </a>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#experience" class="btn btn-gold">View My Work ↓</a>
+          <a href="/contacts.html" class="btn btn-ghost-white">Get in Touch</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="hstat-num">80.36%</div>
+            <div class="hstat-lbl">BSc Agriculture GPA</div>
+          </div>
+          <div>
+            <div class="hstat-num">3+</div>
+            <div class="hstat-lbl">Research Projects</div>
+          </div>
+          <div>
+            <div class="hstat-num">100+</div>
+            <div class="hstat-lbl">Youth Trained</div>
+          </div>
+          <div>
+            <div class="hstat-num">WFF</div>
+            <div class="hstat-lbl">FAO Youth Rep 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="tag">Work Experience</span>
+        <h2 class="section-title">Roles &amp; Responsibilities</h2>
+        <div class="section-divider"></div>
+        <p style="color:var(--text-mid);font-size:0.97rem;max-width:560px;">From global youth forums to grassroots community programs — a track record of impact-driven work across agriculture, leadership, and digital tools.</p>
+      </div>
+
+      <div class="exp-grid">
+        <!-- Featured -->
+        <div class="exp-card featured reveal d1">
+          <div class="exp-card-head">
+            <h3>🌍 Youth Representative — World Food Forum (WFF), FAO</h3>
+            <span class="exp-date">2025</span>
+          </div>
+          <ul>
+            <li>Contributed voice, expertise, and ideas to regional and thematic consultations on global agrifood systems.</li>
+            <li>Engaged in youth policy deliberations shaping the future of sustainable, resilient, and inclusive food systems.</li>
+            <li>Collaborated with National Youth Chapters to support agrifood transformation at local, city, and country levels.</li>
+            <li>Brought Nepal's youth agricultural perspective to global platforms at FAO headquarters.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card reveal d2">
+          <div class="exp-card-head">
+            <h3>President — Youth Thinkers' Society, Lamjung</h3>
+            <span class="exp-date">Mar 2023 – Jul 2024</span>
+          </div>
+          <ul>
+            <li>Collaborated with KOSHISH Nepal to deliver Suicide Awareness Training to 100+ participants.</li>
+            <li>Led Agri Talk Series panel discussions integrating research, extension, and education.</li>
+            <li>Designed School MUN Leadership Training boosting children's public speaking confidence by 25%.</li>
+            <li>Partnered with FAO Nepal and the US Embassy for Model UN programs.</li>
+            <li>Organized Lamjung Model United Nations 2024, engaging 100+ young leaders in global discussions.</li>
+          </ul>
+        </div>
+
+        <div class="exp-card reveal d3">
+          <div class="exp-card-head">
+            <h3>Program Coordinator — Agri Mappers Lamjung Chapter</h3>
+            <span class="exp-date">Mar 2022 – Oct 2023</span>
+          </div>
+          <ul>
+            <li>Conducted Open Street Map (OSM) mapping specifically for agricultural use cases.</li>
+            <li>Provided GIS training focused on spatial analysis and precision farming techniques.</li>
+            <li>Delivered training on MS Office package to rural farming communities.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION & RESEARCH ===== -->
+  <section id="research" class="section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="tag">Education &amp; Research</span>
+        <h2 class="section-title">Academic Background &amp; Projects</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="research-grid">
+        <!-- Education -->
+        <div class="res-card reveal-left">
+          <h3>Education &amp; Grant</h3>
+
+          <div class="edu-entry">
+            <div class="edu-degree">Bachelor of Agriculture — 80.36%</div>
+            <div class="edu-school">Tribhuvan University, IAAS, Lamjung, Nepal</div>
+            <div class="edu-date">March 2020 – October 2024</div>
+            <div class="edu-note">
+              <strong>Thesis:</strong> Effect of Arbuscular Mycorrhizal Fungi and Phosphorus on Soil Nutrient Availability for Growth and Yield of Potato.
+            </div>
+          </div>
+
+          <div class="edu-entry" style="padding-top:20px;border-top:1px solid var(--cream-dark);">
+            <div class="grant-badge">🏆 Grant Award</div>
+            <div class="edu-degree">Environment Based Adaptation Research Grant</div>
+            <div class="edu-school">Ministry of Forest &amp; Environment · NAST</div>
+            <div class="edu-date">April 24, 2024</div>
+            <div class="edu-note">Received funding for thesis research on AMF and phosphorus to improve soil nutrient availability and potato yield under the Ecosystem-Based Adaptation (EBA) framework.</div>
+          </div>
+        </div>
+
+        <!-- Research Projects -->
+        <div class="res-card reveal-right">
+          <h3>Research Projects</h3>
+
+          <div class="rp-item">
+            <div class="rp-title">Climate Adaptation Research</div>
+            <div class="rp-date">July 2024 – April 2025</div>
+            <div class="rp-desc">In collaboration with Kageshwori Manohara Municipality — examined AMF inoculation and varied phosphorus on soil nutrient availability and potato yield for sustainable production.</div>
+          </div>
+
+          <div class="rp-item">
+            <div class="rp-title">Maize Pest Research</div>
+            <div class="rp-date">July 2025</div>
+            <div class="rp-desc">Field survey in Rasuwa and Nuwakot districts assessing maize growers' knowledge and practices on storage pests, documenting Indigenous Technical Knowledge (ITK) for pest control.</div>
+          </div>
+
+          <div class="rp-item">
+            <div class="rp-title">Environment Based Adaptation Research</div>
+            <div class="rp-date">Dec 2023 – Oct 2024</div>
+            <div class="rp-desc">Investigated AMF with phosphorus fertilization to improve soil health, nutrient availability, and potato yield. Funded by NAST and the Ministry of Forest and Environment.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PUBLICATIONS ===== -->
+  <section id="publications" class="section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="tag">Publications &amp; Articles</span>
+        <h2 class="section-title">Published Work</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="pub-grid">
+        <div class="pub-card reveal d1">
+          <div class="pub-source">📰 Setopati · Opinion</div>
+          <h3 class="pub-title">Geopolitical Impact on Nepali Agriculture</h3>
+          <p class="pub-desc">A critical analysis of global geopolitical tensions and their cascading impact on Nepal's food security, input supply chains, and long-term agricultural sustainability.</p>
+          <a href="https://www.setopati.com/blog/384501" target="_blank" rel="noopener" class="pub-link">
+            Read Article <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
+          </a>
+        </div>
+
+        <div class="pub-card soon reveal d2">
+          <div class="pub-source">✦ Coming Soon</div>
+          <h3 class="pub-title" style="color:var(--text-mid);">Next Publication</h3>
+          <p class="pub-desc">New research and opinion pieces are in preparation. Follow on LinkedIn or subscribe to Krishi Chronicles for updates.</p>
+          <a href="/chronicles.html" class="pub-link" style="color:var(--text-light);">Browse Chronicles →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERSHIP ===== -->
+  <section id="leadership" class="section">
+    <div class="container">
+      <div class="sec-header lead-header reveal">
+        <span class="tag" style="color:var(--gold-light);background:rgba(201,147,58,0.15);">Leadership &amp; Conferences</span>
+        <h2 class="section-title" style="color:var(--white);">MUN &amp; Youth Leadership</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="lead-grid">
+        <div class="lead-card reveal d1">
+          <div class="lead-icon">🏛️</div>
+          <div class="lead-date">May 9–11, 2024</div>
+          <h3>Chairperson — Lamjung MUN 2024</h3>
+          <p>Chaired the Lamjung Model United Nations, facilitating global-issues discussions among youth. Collaborated with FAO Nepal, US Embassy, and Besishahar Municipality.</p>
+        </div>
+
+        <div class="lead-card reveal d2">
+          <div class="lead-icon">🎙️</div>
+          <div class="lead-date">May 26–28, 2023</div>
+          <h3>MUN Director — Pokhara MUN</h3>
+          <p>Facilitated committee sessions on global health issues, guided debate procedures, and mentored participants toward constructive policy dialogue.</p>
+        </div>
+
+        <div class="lead-card reveal d3">
+          <div class="lead-icon">🌐</div>
+          <div class="lead-date">EIMUN 2022 &amp; 2023</div>
+          <h3>Delegate — Everest International MUN</h3>
+          <p>Represented Nepal as a delegate, connecting with youth leaders from 20+ countries. Program in collaboration with the U.S. Embassy — enhanced diplomacy and leadership skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="tag">Skills &amp; Expertise</span>
+        <h2 class="section-title">Technical Toolkit</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal d1">
+          <div class="skill-icon">📋</div>
+          <h3>Project Coordination</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Planning &amp; Reporting</span>
+            <span class="skill-pill">MEAL</span>
+            <span class="skill-pill">Stakeholder Analysis</span>
+            <span class="skill-pill">Logical Framework</span>
+            <span class="skill-pill">Theory of Change</span>
+            <span class="skill-pill">Situation Analysis</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal d2">
+          <div class="skill-icon">📊</div>
+          <h3>Community &amp; Data</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Community Facilitation</span>
+            <span class="skill-pill">Participatory Appraisal</span>
+            <span class="skill-pill">SPSS</span>
+            <span class="skill-pill">R</span>
+            <span class="skill-pill">MS Excel</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal d3">
+          <div class="skill-icon">🗺️</div>
+          <h3>GIS &amp; Digital Tools</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">ArcGIS Pro</span>
+            <span class="skill-pill">OpenStreetMap</span>
+            <span class="skill-pill">MS Office</span>
+            <span class="skill-pill">Google Workspace</span>
+            <span class="skill-pill">Canva</span>
+            <span class="skill-pill">Photoshop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="section" style="background:var(--cream-dark);">
+    <div class="container">
+      <div class="sec-header centered reveal">
+        <span class="tag">Gallery</span>
+        <h2 class="section-title">Moments &amp; Milestones</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- NOTE: "Everest MUN.jpg" renamed to "Everest_MUN.jpg" below — fix filename on your server too -->
+        <div class="gallery-item reveal d1" data-src="LMUN_2024.jpg" data-caption="Anup Pudasaini as Chairperson at Lamjung MUN 2024">
+          <img src="LMUN_2024.jpg" alt="Lamjung MUN 2024" loading="lazy" onerror="this.parentElement.style.background='#a5d6a7';this.style.display='none'" />
+          <div class="gallery-overlay"><span class="gallery-caption">Lamjung MUN 2024 — Chairperson</span></div>
+        </div>
+        <div class="gallery-item reveal d2" data-src="agri_talk.png" data-caption="Anup Pudasaini moderating the Agri Talk Series">
+          <img src="agri_talk.png" alt="Agri Talk Series" loading="lazy" onerror="this.parentElement.style.background='#c8e6c9';this.style.display='none'" />
+          <div class="gallery-overlay"><span class="gallery-caption">Agri Talk Series — Moderator</span></div>
+        </div>
+        <div class="gallery-item reveal d3" data-src="school_mun.png" data-caption="School MUN Leadership Training Program">
+          <img src="school_mun.png" alt="School MUN Program" loading="lazy" onerror="this.parentElement.style.background='#dcedc8';this.style.display='none'" />
+          <div class="gallery-overlay"><span class="gallery-caption">School MUN Leadership Training</span></div>
+        </div>
+        <div class="gallery-item reveal d4" data-src="mental_health.jpg" data-caption="Mental Health Awareness Event with KOSHISH Nepal">
+          <img src="mental_health.jpg" alt="Mental Health Awareness" loading="lazy" onerror="this.parentElement.style.background='#b2dfdb';this.style.display='none'" />
+          <div class="gallery-overlay"><span class="gallery-caption">Mental Health Awareness — KOSHISH Nepal</span></div>
+        </div>
+        <div class="gallery-item reveal d1" data-src="mun_event.jpg" data-caption="Model United Nations Event">
+          <img src="mun_event.jpg" alt="MUN Event" loading="lazy" onerror="this.parentElement.style.background='#ffe0b2';this.style.display='none'" />
+          <div class="gallery-overlay"><span class="gallery-caption">Model United Nations Event</span></div>
+        </div>
+        <div class="gallery-item reveal d2" data-src="Everest_MUN.jpg" data-caption="Everest International MUN 2023">
+          <img src="Everest_MUN.jpg" alt="Everest MUN 2023" loading="lazy" onerror="this.parentElement.style.background='#e1bee7';this.style.display='none'" />
+          <div class="gallery-overlay"><span class="gallery-caption">Everest International MUN 2023</span></div>
+        </div>
+        <div class="gallery-item reveal d3" data-src="Director_PMUN.jpg" data-caption="Anup as Director at Pokhara MUN 2023">
+          <img src="Director_PMUN.jpg" alt="Pokhara MUN 2023" loading="lazy" onerror="this.parentElement.style.background='#f8bbd0';this.style.display='none'" />
+          <div class="gallery-overlay"><span class="gallery-caption">Pokhara MUN 2023 — Director</span></div>
+        </div>
+        <div class="gallery-item reveal d4" data-src="symposium.jpg" data-caption="Research Symposium Presentation">
+          <img src="symposium.jpg" alt="Research Symposium" loading="lazy" onerror="this.parentElement.style.background='#fff9c4';this.style.display='none'" />
+          <div class="gallery-overlay"><span class="gallery-caption">Research Symposium</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer">
+    <button class="lightbox-close" id="lbClose" aria-label="Close">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <img id="lbImg" src="" alt="" />
+    <p class="lightbox-caption" id="lbCaption"></p>
+    <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Next">›</button>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-name">Anup Pudasaini</div>
+      <div class="footer-links">
+        <a href="/index.html">Krishi Sarathi Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/contacts.html">Contact</a>
+        <a href="https://www.setopati.com/blog/384501" target="_blank" rel="noopener">Setopati Article</a>
+        <a href="https://www.linkedin.com/in/anup-pudasaini-b9a83924b/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="footer-social">
+        <a href="mailto:pudasainianup100@gmail.com" class="fsoc" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/anup-pudasaini-b9a83924b/" target="_blank" rel="noopener" class="fsoc" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://anuppudasaini.com.np" target="_blank" rel="noopener" class="fsoc" aria-label="Website"><i class="fas fa-globe"></i></a>
+      </div>
+      <p class="footer-copy">© 2025 Anup Pudasaini · Part of <a href="/index.html" style="color:var(--gold-light);">Krishi Sarathi</a></p>
+    </div>
+  </footer>
+
+  <button id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <script>
+    // ===== Hamburger =====
+    const ham = document.getElementById('hamburger');
+    const mob = document.getElementById('mobileMenu');
+    ham.addEventListener('click', () => {
+      ham.classList.toggle('open');
+      mob.classList.toggle('open');
+      document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
+    });
+    mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      ham.classList.remove('open');
+      mob.classList.remove('open');
+      document.body.style.overflow = '';
+    }));
+
+    // ===== Scroll Reveal =====
+    const revEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    revEls.forEach(el => observer.observe(el));
+
+    // ===== Scroll Top =====
+    const stBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => stBtn.classList.toggle('show', window.scrollY > 300));
+    stBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ===== Lightbox =====
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    const lb      = document.getElementById('lightbox');
+    const lbImg   = document.getElementById('lbImg');
+    const lbCap   = document.getElementById('lbCaption');
+    let currentIdx = 0;
+
+    function openLightbox(idx) {
+      currentIdx = idx;
+      const item = galleryItems[idx];
+      lbImg.src = item.dataset.src;
+      lbImg.alt = item.querySelector('img')?.alt || '';
+      lbCap.textContent = item.dataset.caption || '';
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+    function navigate(dir) {
+      currentIdx = (currentIdx + dir + galleryItems.length) % galleryItems.length;
+      openLightbox(currentIdx);
+    }
+
+    galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    document.getElementById('lbPrev').addEventListener('click', () => navigate(-1));
+    document.getElementById('lbNext').addEventListener('click', () => navigate(1));
+    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+  </script>
+</body>
+</html>
